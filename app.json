@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fb6b797f-0f3c-4dd7-9b11-c2a8356d2802"
+      }
+    },
+    "owner": "darshan_200516"
   }
 }
