@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, SafeAreaView, Modal } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, SafeAreaView, Modal, Platform, StatusBar } from 'react-native';
 import { Bell, Mail, Landmark, TrendingUp, Compass, Scan, Sparkles, CheckCircle2, ShieldAlert, Thermometer, Droplet, Wind } from 'lucide-react-native';
 import CustomChart from '../components/CustomChart';
 import { TelemetryControl } from '../components/TelemetryControl';
@@ -440,6 +440,7 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#F3F4F6',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   header: {
     backgroundColor: '#FFFFFF',
@@ -845,6 +846,7 @@ const styles = StyleSheet.create({
   twinModalContainer: {
     flex: 1,
     backgroundColor: '#F3F4F6',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   modalHeader: {
     backgroundColor: '#FFFFFF',

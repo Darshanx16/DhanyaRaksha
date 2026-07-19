@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity, SafeAreaView, Alert, Modal } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity, SafeAreaView, Alert, Modal, Platform, StatusBar } from 'react-native';
 import { Search, Filter, Phone, ShoppingBag, ClipboardList, Bookmark, Sprout, MapPin, ChevronRight, MessageSquare, Check, Sparkles } from 'lucide-react-native';
 import { mockStocks, mockIndustryRequirements } from '../data/mockData';
 import { GrainStock, GrainType, Grade } from '../types';
@@ -446,6 +446,7 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#F3F4F6',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   header: {
     backgroundColor: '#FFFFFF',
