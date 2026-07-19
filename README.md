@@ -12,7 +12,7 @@ You can download and install the native Android application permanently directly
 ### 1. Scan QR Code to Download
 Scan this QR code with your mobile device to immediately download the Android APK:
 
-![DhānyaRakṣa APK Download QR Code](https://Darshanx16.github.io/DhanyaRaksha/assets/qr_code.png)
+![DhānyaRakṣa APK Download QR Code](./assets/qr_code.png)
 
 ### 2. Direct Download Links
 * 🌐 **[Download APK from Web (GitHub Pages)](https://Darshanx16.github.io/DhanyaRaksha/dhanyaraksa.apk)** (Best for mobile browsers)
