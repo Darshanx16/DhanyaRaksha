@@ -10,65 +10,68 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onSelectRole }) => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        {/* Top Decorative App Brand */}
-        <View style={styles.brandBox}>
-          <View style={styles.logoContainer}>
-            <Image
-              source={require('../../assets/icon.png')}
-              style={styles.logoImage}
-            />
+        <View style={styles.mainContent}>
+          {/* Top Decorative App Brand */}
+          <View style={styles.brandBox}>
+            <View style={styles.logoContainer}>
+              <Image
+                source={require('../../assets/logo.png')}
+                style={styles.logoImage}
+                resizeMode="contain"
+              />
+            </View>
+            <Text style={styles.appName}>DhānyaRakṣa AI</Text>
+            <Text style={styles.tagline}>Smart Grain Storage & AI Industry Marketplace</Text>
           </View>
-          <Text style={styles.appName}>DhānyaRakṣa AI</Text>
-          <Text style={styles.tagline}>Smart Grain Storage & AI Industry Marketplace</Text>
-        </View>
 
-        {/* Welcome Section */}
-        <View style={styles.welcomeBox}>
-          <Text style={styles.welcomeTitle}>Choose Your Workspace</Text>
-          <Text style={styles.welcomeDesc}>
-            Log in to view live warehouse telemetry, run insect computer-vision scans, or connect with grain buyers.
-          </Text>
-        </View>
+          {/* Welcome Section */}
+          <View style={styles.welcomeBox}>
+            <Text style={styles.welcomeTitle}>Choose Your Workspace</Text>
+            <Text style={styles.welcomeDesc}>
+              Log in to view live warehouse telemetry, run insect computer-vision scans, or connect with grain buyers.
+            </Text>
+          </View>
 
-        {/* Role Options */}
-        <View style={styles.roleCardContainer}>
-          {/* Warehouse Owner / Farmer Option */}
-          <TouchableOpacity
-            style={[styles.roleCard, styles.warehouseCard]}
-            onPress={() => onSelectRole('warehouse')}
-          >
-            <View style={styles.cardLeft}>
-              <View style={[styles.iconFrame, { backgroundColor: '#E8F5E9' }]}>
-                <Landmark size={24} color="#2E7D32" />
+          {/* Role Options */}
+          <View style={styles.roleCardContainer}>
+            {/* Warehouse Owner / Farmer Option */}
+            <TouchableOpacity
+              style={[styles.roleCard, styles.warehouseCard]}
+              onPress={() => onSelectRole('warehouse')}
+            >
+              <View style={styles.cardLeft}>
+                <View style={[styles.iconFrame, { backgroundColor: '#E8F5E9' }]}>
+                  <Landmark size={24} color="#2E7D32" />
+                </View>
+                <View style={styles.cardTextCol}>
+                  <Text style={styles.cardTitle}>Warehouse Owner / Farmer</Text>
+                  <Text style={styles.cardDesc}>
+                    Monitor silos, track moisture levels, predict shelf life, and scan sacks.
+                  </Text>
+                </View>
               </View>
-              <View style={styles.cardTextCol}>
-                <Text style={styles.cardTitle}>Warehouse Owner / Farmer</Text>
-                <Text style={styles.cardDesc}>
-                  Monitor silos, track moisture levels, predict shelf life, and scan sacks.
-                </Text>
-              </View>
-            </View>
-            <ChevronRight size={18} color="#9CA3AF" />
-          </TouchableOpacity>
+              <ChevronRight size={18} color="#9CA3AF" />
+            </TouchableOpacity>
 
-          {/* Industry Buyer Option */}
-          <TouchableOpacity
-            style={[styles.roleCard, styles.industryCard]}
-            onPress={() => onSelectRole('industry')}
-          >
-            <View style={styles.cardLeft}>
-              <View style={[styles.iconFrame, { backgroundColor: '#FFF9C4' }]}>
-                <Briefcase size={24} color="#F9A825" />
+            {/* Industry Buyer Option */}
+            <TouchableOpacity
+              style={[styles.roleCard, styles.industryCard]}
+              onPress={() => onSelectRole('industry')}
+            >
+              <View style={styles.cardLeft}>
+                <View style={[styles.iconFrame, { backgroundColor: '#FFF9C4' }]}>
+                  <Briefcase size={24} color="#F9A825" />
+                </View>
+                <View style={styles.cardTextCol}>
+                  <Text style={styles.cardTitle}>Food Industry Buyer</Text>
+                  <Text style={styles.cardDesc}>
+                    Search regional stock, filter grains by moisture/grade, and match requirements.
+                  </Text>
+                </View>
               </View>
-              <View style={styles.cardTextCol}>
-                <Text style={styles.cardTitle}>Food Industry Buyer</Text>
-                <Text style={styles.cardDesc}>
-                  Search regional stock, filter grains by moisture/grade, and match requirements.
-                </Text>
-              </View>
-            </View>
-            <ChevronRight size={18} color="#9CA3AF" />
-          </TouchableOpacity>
+              <ChevronRight size={18} color="#9CA3AF" />
+            </TouchableOpacity>
+          </View>
         </View>
 
         {/* Footer info */}
@@ -91,6 +94,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 24,
     paddingVertical: 30,
+  },
+  mainContent: {
+    flex: 1,
+    justifyContent: 'center',
+    width: '100%',
   },
   brandBox: {
     alignItems: 'center',
